@@ -804,6 +804,11 @@ export default {
     padding: 0.09em 0;
 }
 
+.shaka-bottom-controls {
+    width: 98% !important;
+    padding: 0 0 1%;
+}
+
 .skip-segment-button {
     /* position button above player overlay */
     z-index: 1000;
