@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!showContent" class="min-h-[75vh] w-full flex items-center justify-center">
+    <div v-if="!showContent" class="min-h-[80vh] w-full flex items-center justify-center">
         <span id="spinner" />
     </div>
     <div v-else>
