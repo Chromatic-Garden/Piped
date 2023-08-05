@@ -1,5 +1,5 @@
 <template>
-    <nav class="relative w-full flex flex-wrap items-center justify-center px-2 pb-2.5 sm:px-4">
+    <nav class="relative w-full flex flex-wrap items-center justify-center px-2.5 py-2 sm:px-4">
         <div class="flex flex-1 justify-start">
             <router-link class="flex items-center text-3xl font-bold font-sans" :to="homePagePath"
                 ><img
