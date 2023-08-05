@@ -64,13 +64,13 @@
                     v-if="item.uploaderAvatar"
                     :src="item.uploaderAvatar"
                     loading="lazy"
-                    class="mr-0.5 mt-0.5 h-32px w-32px rounded-full"
+                    class="mr-0.5 mt-2.5 h-32px w-32px rounded-full"
                     width="68"
                     height="68"
                 />
             </router-link>
 
-            <div class="flex-1 px-2">
+            <div class="flex-1 px-2 py-1.5">
                 <router-link
                     v-if="item.uploaderUrl && item.uploaderName && !hideChannel"
                     class="link-secondary block overflow-hidden text-sm"
