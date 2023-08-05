@@ -185,7 +185,7 @@ b {
 }
 
 .btn {
-    @apply py-2 lt-md:px-2 md:px-4 rounded cursor-pointer inline-block;
+    @apply py-2 lt-md:px-2 md:px-4 cursor-pointer inline-block;
 }
 
 .reset {
@@ -199,7 +199,7 @@ b {
 .input,
 .select,
 .btn {
-    @apply w-auto text-gray-600 bg-gray-300;
+    @apply w-auto text-gray-600 bg-gray-300 rounded;
 }
 
 .input,
