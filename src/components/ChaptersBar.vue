@@ -1,7 +1,7 @@
 <template>
     <!-- desktop view -->
-    <div v-if="!mobileLayout" class="max-h-75vh max-w-35vw min-h-64 flex-col overflow-y-scroll lt-lg:hidden">
-        <h2 class="mb-2 bg-gray-500/50 p-2" aria-label="chapters" title="chapters">
+    <div v-if="!mobileLayout" class="max-h-80vh w-22vw min-h-64 flex-col overflow-y-scroll lt-lg:hidden">
+        <h2 class="text-xl font-bold p-2" aria-label="chapters" title="chapters">
             {{ $t("video.chapters") }} ({{ chapters.length }})
         </h2>
         <div
@@ -11,10 +11,10 @@
             :class="{ 'bg-red-500/50': isCurrentChapter(index) }"
             @click="$emit('seek', chapter.start)"
         >
-            <div class="flex">
-                <span class="mr-2 mt-5 text-current" v-text="index + 1" />
-                <img class="shrink-0" :src="chapter.image" :alt="chapter.title" />
-                <div class="m-2 flex flex-col">
+            <div class="flex items-center">
+                <span class="text-current" v-text="index + 1" />
+                <img class="w-5vw mx-2 shrink-0" :src="chapter.image" :alt="chapter.title" />
+                <div class="flex flex-col">
                     <span class="text-sm" :title="chapter.title" v-text="chapter.title" />
                     <span class="text-sm font-bold text-blue-500" v-text="timeFormat(chapter.start)" />
                 </div>
@@ -27,7 +27,7 @@
         v-if="mobileLayout && getPreferenceString('mobileChapterLayout') == 'Vertical'"
         class="max-h-64 flex flex-col overflow-y-scroll"
     >
-        <h2 class="mb-2 bg-gray-500/50 p-2" aria-label="chapters" title="chapters">
+        <h2 class="text-xl font-bold p-2" aria-label="chapters" title="chapters">
             {{ $t("video.chapters") }} ({{ chapters.length }})
         </h2>
         <div
@@ -37,10 +37,10 @@
             :class="{ 'bg-red-500/50': isCurrentChapter(index) }"
             @click="$emit('seek', chapter.start)"
         >
-            <div class="flex">
-                <span class="mr-2 mt-5 text-current" v-text="index + 1" />
-                <img class="shrink-0" :src="chapter.image" :alt="chapter.title" />
-                <div class="m-2 flex flex-col">
+            <div class="flex items-center">
+                <span class="text-current" v-text="index + 1" />
+                <img class="w-14vw mx-2 shrink-0" :src="chapter.image" :alt="chapter.title" />
+                <div class="flex flex-col">
                     <span class="text-sm" :title="chapter.title" v-text="chapter.title" />
                     <span class="text-sm font-bold text-blue-500" v-text="timeFormat(chapter.start)" />
                 </div>
@@ -102,14 +102,10 @@ defineEmits(["seek"]);
     @apply w-full h-full;
 }
 .chapter-vertical {
-    @apply cursor-pointer self-center p-2.5;
+    @apply w-full cursor-pointer self-center p-2.5;
 }
-.chapter-vertical img {
-    @apply w-3/10 h-3/10;
-}
-
 .chapter-vertical:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-600;
 }
 .text-truncate {
     @apply truncate overflow-hidden inline-block w-10em;
