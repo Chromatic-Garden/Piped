@@ -8,7 +8,7 @@
             class="h-30 w-full object-cover py-1.5 md:h-50"
             loading="lazy"
         />
-        <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="mx-4 flex flex-col items-center justify-between md:flex-row">
             <div class="flex place-items-center">
                 <img height="48" width="48" class="m-1 rounded-full" :src="channel.avatarUrl" />
                 <div class="flex items-center gap-1">
@@ -46,7 +46,7 @@
 
         <WatchOnButton :link="`https://youtube.com/channel/${channel.id}`" />
 
-        <div class="mx-1 my-2 flex">
+        <div class="mx-4 my-2 flex">
             <button
                 v-for="(tab, index) in tabs"
                 :key="tab.name"

@@ -1,5 +1,5 @@
 <template>
-    <div class="reset min-h-screen w-full flex flex-col px-1vw py-5 antialiased" :class="[theme]">
+    <div class="reset min-h-screen w-full flex flex-col antialiased" :class="[theme]">
         <div class="flex-1">
             <NavBar />
             <router-view v-slot="{ Component }">
@@ -181,7 +181,7 @@ b {
 }
 
 .video-grid {
-    @apply grid grid-cols-1 mx-2 sm:mx-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 col-auto lt-md:gap-x-3 md:gap-x-6 gap-y-5;
+    @apply grid grid-cols-1 mx-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 col-auto lt-md:gap-x-3 md:gap-x-4 gap-y-4;
 }
 
 .btn {
@@ -205,6 +205,10 @@ b {
 .input,
 .select {
     @apply h-8;
+}
+
+.select {
+    @apply px-3;
 }
 
 .checkbox {

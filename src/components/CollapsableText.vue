@@ -1,5 +1,5 @@
 <template v-if="text">
-    <div class="mx-1 whitespace-pre-wrap py-2">
+    <div class="mx-4 whitespace-pre-wrap py-2">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <span v-if="showFullText" v-html="fullText()" />
         <!-- eslint-disable-next-line vue/no-v-html -->

@@ -99,7 +99,7 @@
     <div class="search-container mb-2 w-full md:hidden">
         <input
             v-model="searchText"
-            class="input h-10 w-full"
+            class="input h-10 w-full mx-4"
             type="text"
             role="search"
             :title="$t('actions.search')"

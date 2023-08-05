@@ -1,7 +1,7 @@
 <template>
     <h1 v-t="'titles.subscriptions'" class="my-3 text-center font-bold" />
     <!-- import / export section -->
-    <div class="w-full flex justify-between">
+    <div class="mx-4 w-full flex justify-between">
         <div class="flex">
             <button class="btn mx-1">
                 <router-link v-t="'actions.import_from_json'" to="/import" />
@@ -15,7 +15,7 @@
     </div>
     <br />
     <hr />
-    <div class="w-full flex flex-wrap">
+    <div class="mx-4 flex flex-wrap">
         <button
             v-for="group in channelGroups"
             :key="group.groupName"
@@ -36,7 +36,7 @@
     <br />
     <hr />
     <!-- Subscriptions card list -->
-    <div class="xl:grid xl:grid-cols-5 <md:flex-wrap">
+    <div class="mx-3 xl:grid xl:grid-cols-5 <md:flex-wrap">
         <!-- channel info card -->
         <div
             v-for="subscription in filteredSubscriptions"

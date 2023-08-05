@@ -1,7 +1,7 @@
 <template>
     <h1 v-t="'titles.feed'" class="my-3 text-center font-bold" />
 
-    <div class="flex flex-col flex-wrap gap-2 children:(flex items-center gap-1) md:flex-row md:items-center">
+    <div class="mx-4 flex flex-col flex-wrap gap-2 children:(flex items-center gap-1) md:flex-row md:items-center">
         <span>
             <label for="filters">
                 <strong v-text="`${$t('actions.filter')}:`" />
@@ -38,7 +38,7 @@
     </div>
     <hr />
 
-    <span class="flex gap-2">
+    <span class="mx-4 flex gap-2">
         <router-link class="btn" to="/subscriptions">Subscriptions</router-link>
         <a :href="getRssUrl" class="btn">
             <font-awesome-icon icon="rss" />

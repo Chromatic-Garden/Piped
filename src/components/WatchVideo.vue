@@ -41,8 +41,8 @@
                 />
             </div>
             <!-- video title -->
-            <div class="mt-2 break-words text-2xl font-bold" v-text="video.title" />
-            <div class="mb-3 mt-3 flex flex-wrap">
+            <div class="mx-4 mt-2 break-words text-2xl font-bold" v-text="video.title" />
+            <div class="mx-4 mb-3 mt-3 flex flex-wrap">
                 <!-- views / date -->
                 <div class="flex flex-auto gap-2">
                     <span v-t="{ path: 'video.views', args: { views: addCommas(video.views) } }" />
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <!-- Channel info & options flex container -->
-            <div class="flex flex-wrap gap-1">
+            <div class="flex flex-wrap mx-4 gap-1">
                 <!-- Channel Image & Info -->
                 <div class="flex items-center">
                     <img :src="video.uploaderAvatar" alt="" loading="lazy" class="rounded-full" />
@@ -161,7 +161,7 @@
 
             <button
                 v-t="`actions.${showDesc ? 'minimize_description' : 'show_description'}`"
-                class="btn mb-2"
+                class="btn ml-4 mb-2"
                 @click="showDesc = !showDesc"
             />
 
@@ -172,18 +172,19 @@
 
             <template v-if="showDesc">
                 <!-- eslint-disable-next-line vue/no-v-html -->
-                <div class="description break-words" v-html="purifiedDescription" />
+                <div class="mx-4 description break-words" v-html="purifiedDescription" />
                 <br />
 
                 <div
                     v-if="sponsors && sponsors.segments"
+                    class="mx-4"
                     v-text="`${$t('video.sponsor_segments')}: ${sponsors.segments.length}`"
                 />
-                <div v-if="video.category" v-text="`${$t('video.category')}: ${video.category}`" />
-                <div v-text="`${$t('video.license')}: ${video.license}`" />
-                <div class="capitalize" v-text="`${$t('video.visibility')}: ${video.visibility}`" />
+                <div v-if="video.category" class="mx-4" v-text="`${$t('video.category')}: ${video.category}`" />
+                <div class="mx-4" v-text="`${$t('video.license')}: ${video.license}`" />
+                <div class="mx-4 capitalize" v-text="`${$t('video.visibility')}: ${video.visibility}`" />
 
-                <div v-if="video.tags" class="mt-2 flex flex-wrap gap-2">
+                <div v-if="video.tags" class="mx-4 mt-2 flex flex-wrap gap-2">
                     <router-link
                         v-for="tag in video.tags"
                         :key="tag"
@@ -197,15 +198,15 @@
 
         <hr />
 
-        <label for="chkAutoLoop"><strong v-text="`${$t('actions.loop_this_video')}:`" /></label>
+        <label class="ml-4" for="chkAutoLoop"><strong v-text="`${$t('actions.loop_this_video')}:`" /></label>
         <input id="chkAutoLoop" v-model="selectedAutoLoop" class="ml-1.5" type="checkbox" @change="onChange($event)" />
         <br />
-        <label for="chkAutoPlay"><strong v-text="`${$t('actions.auto_play_next_video')}:`" /></label>
+        <label class="ml-4" for="chkAutoPlay"><strong v-text="`${$t('actions.auto_play_next_video')}:`" /></label>
         <input id="chkAutoPlay" v-model="selectedAutoPlay" class="ml-1.5" type="checkbox" @change="onChange($event)" />
 
         <hr />
 
-        <div class="grid grid-cols-1 sm:grid-cols-4 xl:grid-cols-5">
+        <div class="mx-4 grid grid-cols-1 sm:grid-cols-4 xl:grid-cols-5">
             <div class="sm:col-span-3 xl:col-span-4">
                 <button
                     v-if="!comments?.disabled"

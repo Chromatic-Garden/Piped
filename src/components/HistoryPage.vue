@@ -1,7 +1,7 @@
 <template>
     <h1 v-t="'titles.history'" class="my-3 text-center font-bold" />
 
-    <div class="flex">
+    <div class="mx-4 flex">
         <div class="flex flex-col gap-2 md:flex-row md:items-center">
             <button v-t="'actions.clear_history'" class="btn" @click="clearHistory" />
 
