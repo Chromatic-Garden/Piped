@@ -4,7 +4,7 @@
             <font-awesome-icon icon="chevron-left" /><span v-t="'actions.back'" class="ml-1.5" />
         </button>
     </div>
-    <h1 v-t="'titles.preferences'" class="text-center font-bold" />
+    <h1 v-t="'titles.preferences'" class="my-3 text-center font-bold" />
     <hr />
     <label for="ddlTheme" class="pref">
         <strong v-t="'actions.theme'" />

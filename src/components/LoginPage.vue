@@ -1,5 +1,5 @@
 <template>
-    <h1 v-t="'titles.login'" class="my-4 text-center font-bold" />
+    <h1 v-t="'titles.login'" class="my-3 text-center font-bold" />
     <hr />
     <div class="text-center">
         <form class="children:pb-3">

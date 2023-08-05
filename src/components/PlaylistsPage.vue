@@ -1,5 +1,5 @@
 <template>
-    <h2 v-t="'titles.playlists'" class="my-4 font-bold" />
+    <h2 v-t="'titles.playlists'" class="my-3 text-center font-bold" />
 
     <div class="mb-3 flex justify-between">
         <button v-t="'actions.create_playlist'" class="btn" @click="onCreatePlaylist" />
@@ -64,7 +64,7 @@
     </div>
     <hr />
 
-    <h2 v-t="'titles.bookmarks'" class="my-4 font-bold" />
+    <h2 v-t="'titles.bookmarks'" class="my-3 text-center font-bold" />
 
     <div v-if="bookmarks" class="video-grid">
         <router-link
