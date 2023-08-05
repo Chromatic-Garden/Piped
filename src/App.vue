@@ -242,11 +242,11 @@ h2 {
 }
 
 h1 {
-    @apply !text-5xl;
+    @apply !text-3xl;
 }
 
 h2 {
-    @apply !text-3xl;
+    @apply !text-2xl;
 }
 
 .table {
