@@ -1,5 +1,5 @@
 <template>
-    <div class="comment mt-1.5 flex">
+    <div class="comment my-1.5 flex">
         <img
             :src="comment.thumbnail"
             class="comment-avatar h-12 w-12 rounded-full"
